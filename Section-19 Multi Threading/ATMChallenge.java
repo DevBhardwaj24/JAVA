@@ -1,3 +1,57 @@
 public class ATMChallenge {
-    // do it on saturday...
+    public static void main(String[] args) {
+        ATM atm=new ATM();
+        Customer c1=new Customer("Dev",atm,100);
+        Customer c2=new Customer("Krishna",atm,200);
+        c1.start();
+        c2.start();
+    }
+}
+
+class ATM{
+    synchronized public void checkBlnc(String name){
+        System.out.println(name+" Checking");
+
+        try {
+            Thread.sleep(1000);
+        } catch (Exception e) {
+        
+        }
+
+        System.out.println("Balance");
+    }
+
+    synchronized public void withdraw(String name,int amount){
+        System.out.println(name+" Withdrawing");
+
+        try {
+            Thread.sleep(1000);
+        } catch (Exception e) {
+        
+        }
+
+        System.out.println(amount);
+        
+    }
+}
+
+class Customer extends Thread{
+    ATM atm;
+    String name;
+    int amount;
+
+    public Customer(String n,ATM a,int amt){
+        name=n;
+        atm=a;
+        amount=amt;
+    }
+
+    public void useATM(){
+        atm.checkBlnc(name);
+        atm.withdraw(name,amount);
+    }
+
+    public void run(){
+        useATM();
+    }
 }
