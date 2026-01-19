@@ -16,7 +16,7 @@ class Stack{
     private int S[];
 
     public Stack(int i) {
-        //TODO Auto-generated constructor stub
+        // nothing
     }
 
     public void stack(int sz){
