@@ -9,5 +9,7 @@ public class Cuboid {
         double vol=l*b*h;
         System.out.println(vol);
 
+        sc.close();
+
     }
 }
