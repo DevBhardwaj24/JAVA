@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class ComparableInterface {
+public class Comparable_Interface {
     public static void main(String[] args) {
         TreeSet<Point> points = new TreeSet<>();
         points.add(new Point(3, 4));
