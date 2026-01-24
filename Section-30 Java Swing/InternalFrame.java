@@ -1,0 +1,3 @@
+public class InternalFrame {
+    // do it laterr....
+}
